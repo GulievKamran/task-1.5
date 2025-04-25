@@ -1,37 +1,28 @@
-const comp_numb=Math.round(Math.random()*9)+1;
-let my_number;
-let addim;
-let message="";
-let found=false;
+const comp_num = Math.round(Math.random()*10)+1;
+let my_number=+prompt("eded yaz");
+addim=1;
 
-for(addim=1;addim<=11;addim++){
-    my_number=+prompt("edeed yaz");
+while(comp_num!==my_number){
+    if(my_number>comp_num) {
+        my_number=+prompt("decrease")
+    }
+    else{
+        my_number=+prompt("increase")
+    }
 
+    addim++
+}
+ 
+message="";
 
-if(comp_numb===my_number){
-    message+="Congart you found it \n\n";
-    found=true;
-    break;
-} else if(my_number>comp_numb){
-    alert("decrease the number")
-}else if(my_number<comp_numb){
-    alert("increase the num")
-}}
-
-
-if(!found){
-    message+="tapmadin ncncnc \n\n";
+if(addim>1 && addim<=5){
+    message+="mukemmelsen sen \n\n"
+} else{
+    message+="yaxsi deyil amma tapdin nehayet \n\n"
 }
 
-message+="Senin son texminin:"+my_number+"\n\n";
-message+="Duzgun eded:"+comp_numb+"\n\n";
-message+="addimda tapdin:"+addim+"\n";
-
+message+="sson texminim-"+my_number+"\n\n"
+message+="duzgun olan-"+comp_num+"\n\n"
+message+="addimda tapdigim--"+addim+"\n\n"
 
 document.getElementById("bey").innerText=message;
-
-
-    
-
-
-
